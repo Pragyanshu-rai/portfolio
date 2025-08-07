@@ -1,0 +1,49 @@
+name: Deploy React App to GitHub Pages
+# description: This workflow will ensure that the application is deployed on GitHub pages as well as maintaining the versioning 
+
+on:
+  push:
+    branches:
+      - master # only run this on the master branch
+
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Release Please
+        uses: google-github-actions/release-please-action@v4
+        with:
+          release-type: node
+          token: ${{ secrets.PORTFOLIO_TOKEN }}
+          changelog-path: changelog.md
+          update-changelog: true
+
+  deploy:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      
+      - name: Install Dependencies
+        run: npm ci
+      
+      - name: Build React App
+        run: npm run build
+
+      - name: Deploy To GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.PORTFOLIO_TOKEN }}
+          publish_dir: ./dist

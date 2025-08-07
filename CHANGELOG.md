@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Pragyanshu-rai/portfolio/compare/v1.1.0...v1.2.0) (2025-08-07)
+
+
+### Features
+
+* fixed the github action workflow ([bcb39f4](https://github.com/Pragyanshu-rai/portfolio/commit/bcb39f4263f1b63bac60ed137c204fca869e6ba2))
+
 ## [1.1.0](https://github.com/Pragyanshu-rai/portfolio/compare/v1.0.0...v1.1.0) (2025-08-07)
 
 

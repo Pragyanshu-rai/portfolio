@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Pragyanshu-rai/portfolio/compare/v1.2.0...v1.2.1) (2025-08-07)
+
+
+### Bug Fixes
+
+* updated the vite.config ([4f4b854](https://github.com/Pragyanshu-rai/portfolio/commit/4f4b854b5ce0d5ff8c9d183213c816bef9e88b00))
+
 ## [1.2.0](https://github.com/Pragyanshu-rai/portfolio/compare/v1.1.0...v1.2.0) (2025-08-07)
 
 

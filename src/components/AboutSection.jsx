@@ -85,7 +85,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="https://github.com/Pragyanshu-rai/Pragyanshu-rai/blob/master/PragyanshuRaiResume.pdf"
+                href="https://github.com/Pragyanshu-rai/Pragyanshu-rai/blob/master/Pragyanshu-Rai-Java-Developer-Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
                 download
                 target="_blank"
